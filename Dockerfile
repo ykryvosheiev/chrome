@@ -46,6 +46,7 @@ RUN if [ "$USE_CHROME_STABLE" = "true" ]; then \
     export CHROMEDRIVER_SKIP_DOWNLOAD=true;\
   fi &&\
   npm i puppeteer@$PUPPETEER_VERSION;\
+  npm install puppeteer-extra puppeteer-extra-plugin-stealth &&\
   npm run postinstall &&\
   npm run build &&\
   npm prune --production &&\
